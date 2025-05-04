@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 14pt;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px 0 #00000070;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.description-card{
+    /* border:1px solid black; */
+    max-width:800px;
+    margin:auto;
+    padding:20px;
+}
+
+span {
+    font-size: 2rem;
+}
+
+.self-description span {
+    margin: 0 5px;
+}
+
+/* Section Full Screen */
+.section {
+    min-height: 84.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-image img {
+    /* border:1px solid black; */
+    /* width:400px; */
+    height: 70vh;
+    box-shadow: 0 0 15px #333;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.contact a{
+    text-decoration: none;
+    color:#555;
+    font-weight:700;
+}
+
+/* Background color for each page */
+.home,
+.about,
+.services,
+.project,
+.contact {
+    background: #ddd;
+    color: #333;
+}
+
+/* project */
+.project-flex {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    background: white;
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    /* flex: 1 1 250px; */
+    max-width: 300px;
+    min-width: 250px;
+    height: 400px;
+    font-size: 1.2rem;
+    text-align: center;
+    align-content: center;
+}
+
+.project-item>p{
+    font-size:1rem;
+    margin-top: 30px;
+}
+
+.project-item:hover{
+    /* transform: scale(1.1); */
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #555;
+    display:block;
+}
+
+.project a{
+    text-decoration: none;
+    color:#333
+}
+
+.service-item {
+    background: white;
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-width: 250px;
+    height: 400px;
+    font-size: 1.2rem;
+    text-align: center;
+    align-content: center;
+}
+
+.service-item:hover {
+    /* transform: scale(1.1); */
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #555;
+}
+
+.about-card{
+    /* border:1px solid black; */
+    padding:20px;
+    max-width:750px;
+    line-height: 22pt;
+}
+
+.about-card p{
+    margin-top:20px;
+    font-size: 1.1rem;
+}
+
+/* Form */
+form {
+    max-width: 600px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .logo{
+        text-align: center;
+    }
+   header .nav nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   header .nav nav a{
+        margin:20px 0;
+    }
+
+    .project-flex {
+        flex-direction: column;
+        align-items: top;
+    }
+
+    .section{
+        height:auto;
+    }
+
+    .section .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+        height:auto;
+    }
+
+    .hero-image img {
+        width:200px;
+        height:400px;
+    }
+}
